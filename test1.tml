@@ -1,0 +1,8 @@
+#!/usr/bin/env testml
+
+foo = "Hello"
+
+bar = "world"
+
+"{foo}, {bar}." == "Hello, world."
+  :"Interpolation is working!"

@@ -1,0 +1,159 @@
+---- config
+# Basic config options.
+title: Your Idea + CafeScript + L'Ingy -> CPAN + 6PAN + PyPI + NPM + …
+indent: 5
+auto_size: 1
+vim_opts: '-u NONE'
+skip: 0
+
+vimrc: |
+  unmap AA
+  unmap QQ
+  set nohlsearch
+  au BufRead * syn match vroom_command "\v^\s*\$.*$"
+  hi vroom_command  term=bold,italic,underline ctermfg=Brown
+  autocmd BufWritePre *.json :syn off
+
+  map j /^\s\+\$<cr>
+  map k ?^\s\+\$<cr>
+  map r :exec '!clear;printf "=\%.0s" {1..80};echo;' . substitute(getline('.'), '^\s\+\$\s\+', '', '')<cr>
+  map m r
+  map <ENTER> r
+  map q ;
+  map qq :q!<cr>
+
+  map 1 :wincmd o<cr>
+  map 2 :wincmd v<cr>
+  map \1 :w<cr>
+
+---- center
+Your Idea + CafeScript + L'Ingy -> CPAN + 6PAN + PyPI + NPM + …
+
+by Ingy dot Net
+
+The Perl Conference - 2018
+Salt Lake City
+
+----
+== This is Not a Lightning Talk…
+
++== This is a L'Ingy Talk!!!
+
+----
+== TestML
+
+* Earlier today I gave a talk about "TestML"
+
++* A new programming language for writing tests
+
++* These tests run in any programming language
+
+$ vim test1.tml
+
+$ make test
+
+----
+== TestML Compiles to L'Ingy!
+
++* L'Ingy is another new language
+
++* An Extremely Simple One
+
++* L'Ingy == Lisp + JSON
+
+$ vim test1.tml .testml/test1.tml.json -O
+
+----
+== The TestML Compiler is written in CoffeeScript!
+
+* CoffeeScript is Cleanest Syntax I've Seen
+
+* It transpiles to JavaScript
+
+* Runs on Server and in Browser
+
+  http://testml.org/playground/?type=example&name=math&view=tap
+
+* TestML Runtime in (495 lines of) CoffeeScript:
+
+ $ vim ~/src/TestML/testml/lib/coffee/testml/run.coffee +1
+
+----
+== Ingy Loves Acmeism
+
+* Acmeism Started in 2006
+
+* Modules Make Languages Great
+
+* Publish Your Modules in All Languages
+
+* Acmeism's Holy Grail???
+
++* Write a Module Once, Publish Everywhere
+  * CPAN, 6PAN, PyPI, RubyGems, NPM
+
+----
+== 2018 - Acmeism Now
+
+* Sooo...
+
++* If L'Ingy Can Run Anywhere...
+
++* Then write a module in L'Ingy; upload everywhere!
+
++* But L'Ingy is Unwritable!
+
+----
+== *** Introducing CafeScript ***
+
++* If...
+
++* I Fork CoffeeScript to CafeScript...
+
++* Then...
+
++* I replace the JavaScript writer component, with...
+
++* A L'Ingy writer!
+
++* THEN...
+
++* Your Module Runs Everywhere!!!
+
+----
+== Acmeism is Alive...
+
+== DONE & DONE!!!
+
+== \o/
+
++== (or more approriately)
+
++== \oXoXoXoXoXoXoXoXoXoXoXo/
+----
+== CafeScript 2.0
+
+* Now Your Ideas are Enjoyed Everywhere!
+
++* But...
+
++* Every Language Requires a L'Ingy Eval Module
+
++* L'Ingy code is run in a L'Ingy Eval Loop
+
++* This will be slower than native code :(
+
++* So next, we make:
+
++  * L'Ingy to Native Compilers!
++  * L'Ingy to C Compilers!
++  * L'Ingy to JVM Compilers!
++  * L'Ingy to LLVM Compilers!
+
+----
+== QED!
+
++== Right?!   :]
+
+----
+== The End
