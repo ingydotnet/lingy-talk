@@ -5,6 +5,7 @@ indent: 5
 auto_size: 1
 vim_opts: '-u NONE'
 skip: 0
+top: 1
 
 vimrc: |
   unmap AA
